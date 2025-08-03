@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Configuration de base de l'application -->
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Golf Distance Detector</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>golf_detection_app</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	
+	<!-- Permissions pour la caméra -->
+	<key>NSCameraUsageDescription</key>
+	<string>Cette application utilise la caméra pour photographier le terrain de golf et détecter automatiquement les balles et drapeaux afin de calculer les distances.</string>
+	
+	<!-- Permissions pour la galerie photos -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cette application sauvegarde les photos analysées dans votre galerie pour que vous puissiez les retrouver facilement.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Cette application sauvegarde les photos avec les résultats d'analyse dans votre galerie.</string>
+	
+	<!-- Orientations supportées pour iPhone -->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	
+	<!-- Orientations supportées pour iPad -->
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	
+	<!-- Configuration Flutter -->
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	
+	<!-- Configuration de l'écran de lancement -->
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	
+	<!-- Version iOS minimale -->
+	<key>MinimumOSVersion</key>
+	<string>11.0</string>
+	
+	<!-- Caractéristiques requises -->
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>camera-flash</string>
+		<string>still-camera</string>
+		<string>auto-focus-camera</string>
+	</array>
+	
+	<!-- Configuration de l'apparence -->
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	
+	<!-- Désactiver le backup automatique -->
+	<key>com.apple.developer.default-data-protection</key>
+	<string>NSFileProtectionNone</string>
+	
+	<!-- Configuration pour le partage de fichiers -->
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Images</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.image</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+		</dict>
+	</array>
+	
+	<!-- Configuration des URL schemes -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>golf.detection.app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>golf-detection</string>
+			</array>
+		</dict>
+	</array>
+	
+	<!-- Sécurité transport -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	
+</dict>
+</plist>
